@@ -3,7 +3,7 @@ data "aws_route_tables" "requester" {
   vpc_id   = data.aws_vpc.requester.id
 
   filter {
-    name   = "tag:aws:cloudformation:logical-id"
+    name   = var.requester_filter_name
     values = ["PrivateRouteTable*"]
   }
 }

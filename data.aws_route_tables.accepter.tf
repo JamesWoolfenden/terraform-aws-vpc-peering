@@ -3,7 +3,7 @@ data "aws_route_tables" "accepter" {
   vpc_id   = data.aws_vpc.accepter.id
 
   filter {
-    name   = "tag:aws:cloudformation:logical-id"
+    name   = var.accepter_filter_name
     values = ["PrivateRouteTable*"]
   }
 }

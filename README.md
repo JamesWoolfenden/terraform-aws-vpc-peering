@@ -12,13 +12,12 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-Data filters need to be passed as variables.
 Include this repository as a module in your existing terraform code:
 
 ```hcl
 module "peer" {
   source     = "JamesWoolfenden/vpc-peering/aws"
-  version    = "0.2.3"
+  version    = "0.2.6"
   common_tags = var.common_tags
   providers = {
     aws.accepter  = "aws.src"
