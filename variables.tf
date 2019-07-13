@@ -1,6 +1,4 @@
-variable peer_owner_id {
-  type = string
-}
+
 
 variable "common_tags" {
   type = map

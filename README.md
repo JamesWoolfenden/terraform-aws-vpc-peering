@@ -2,7 +2,7 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-codecommit [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-codecommit.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codecommit) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codecommit.svg)](https://github.com/JamesWoolfenden/terraform-aws-codecommit/releases/latest)
+# terraform-aws-vpc-peering [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc-peering.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc-peering) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc-peering.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/releases/latest)
 
 Terraform module to peer VPCs.
 
@@ -41,13 +41,13 @@ Check out these related projects.
 
 **Got a question?**
 
-File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-codecommit/issues).
+File a GitHub [issue](https://github.com/jameswoolfenden/terraform-aws-vpc-peering/issues).
 
 ## Contributing
 
 ### Bug Reports & Feature Requests
 
-Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-codecommit/issues) to report any bugs or file feature requests.
+Please use the [issue tracker](https://github.com/jameswoolfenden/terraform-aws-vpc-peering/issues) to report any bugs or file feature requests.
 
 ## Copyrights
 
@@ -89,8 +89,8 @@ under the License.
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
 [twitter]: https://twitter.com/Slalom
 
-[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-codecommit&url=https://github.com/jameswoolfenden/terraform-aws-codecommit
-[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-codecommit&url=https://github.com/jameswoolfenden/terraform-aws-codecommit
-[share_reddit]: https://reddit.com/submit/?url=https://github.com/jameswoolfenden/terraform-aws-codecommit
-[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/jameswoolfenden/terraform-aws-codecommit
-[share_email]: mailto:?subject=terraform-aws-codecommit&body=https://github.com/jameswoolfenden/terraform-aws-codecommit
+[share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-vpc-peering&url=https://github.com/jameswoolfenden/terraform-aws-vpc-peering
+[share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-vpc-peering&url=https://github.com/jameswoolfenden/terraform-aws-vpc-peering
+[share_reddit]: https://reddit.com/submit/?url=https://github.com/jameswoolfenden/terraform-aws-vpc-peering
+[share_facebook]: https://facebook.com/sharer/sharer.php?u=https://github.com/jameswoolfenden/terraform-aws-vpc-peering
+[share_email]: mailto:?subject=terraform-aws-vpc-peering&body=https://github.com/jameswoolfenden/terraform-aws-vpc-peering

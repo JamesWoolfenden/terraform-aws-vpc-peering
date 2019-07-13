@@ -1,8 +1,9 @@
 module "peer" {
-  source = "../../"
-  provider = {
-    aws.acceptor  = "aws.acceptor"
-    aws.requester = "aws.requester"
+  source      = "../../"
+  common_tags = var.common_tags
+  providers = {
+    aws.accepter  = "aws.src"
+    aws.requester = "aws.req"
   }
 }
 
