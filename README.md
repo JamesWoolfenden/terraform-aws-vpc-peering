@@ -18,6 +18,12 @@ Include this repository as a module in your existing terraform code:
 ```hcl
 module "peer" {
   source     = "JamesWoolfenden/vpc-peering/aws"
+  version    = "0.2.3"
+  common_tags = var.common_tags
+  providers = {
+    aws.accepter  = "aws.src"
+    aws.requester = "aws.req"
+  }
 }
 ```
 
