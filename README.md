@@ -4,7 +4,7 @@
 
 # terraform-aws-codecommit [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-codecommit.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-codecommit) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-codecommit.svg)](https://github.com/JamesWoolfenden/terraform-aws-codecommit/releases/latest)
 
-Terraform module to peer VPCs [`Codecommit`](https://aws.amazon.com/codecommit/) CI/CD system.
+Terraform module to peer VPCs.
 
 ---
 
@@ -12,38 +12,24 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 ## Usage
 
-Data fiiltewrs need modification. 
+Data fiiltewrs need modification.
 Include this repository as a module in your existing terraform code:
 
 ```hcl
 module "peer" {
-  source     = "JamesWoolfenden/dlmautowsnapshot/aws/codecommit"
+  source     = "JamesWoolfenden/vpc-peering/aws"
 }
 ```
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| default_branch | The name of the default repository branch | string | `master` | no |
-| depends_on | This is a way to make a module depends on, which isn't built in. | list | `<list>` | no |
-| developer_group | An existing Iam Group to attach the policy permissions to | string | - | yes |
-| repository_name | The name of your GIT repository | string | - | yes |
-
 ## Outputs
-
-| Name | Description |
-|------|-------------|
-| clone_url_https | - |
-| clone_url_ssh | - |
 
 # Instructions
 
 For Peerring VPCs TODO
 
 ## Details
-
--
 
 ## Related Projects
 
