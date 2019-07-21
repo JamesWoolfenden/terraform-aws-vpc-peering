@@ -5,5 +5,3 @@ resource "aws_route" "requester" {
   destination_cidr_block    = data.aws_vpc.accepter.cidr_block
   vpc_peering_connection_id = aws_vpc_peering_connection_accepter.peer.id
 }
-
-

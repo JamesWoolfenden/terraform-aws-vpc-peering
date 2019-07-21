@@ -6,4 +6,3 @@ module "peer" {
     aws.requester = "aws.req"
   }
 }
-

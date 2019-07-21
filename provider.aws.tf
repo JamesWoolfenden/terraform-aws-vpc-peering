@@ -5,4 +5,3 @@ provider "aws" {
 provider "aws" {
   alias = "requester"
 }
-

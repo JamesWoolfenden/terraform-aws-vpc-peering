@@ -7,4 +7,3 @@ data "aws_route_tables" "requester" {
     values = ["PrivateRouteTable*"]
   }
 }
-
