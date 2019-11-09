@@ -13,7 +13,7 @@ It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 Include this repository as a module in your existing terraform code:
 
-```hcl
+```terraform
 module "peer" {
   source     = "JamesWoolfenden/vpc-peering/aws"
   version    = "0.2.6"
@@ -32,7 +32,7 @@ module "peer" {
 | accepter\_account\_alias |  | string | `""` | no |
 | accepter\_filter\_name |  | string | `"tag:aws:cloudformation:logical-id"` | no |
 | accepter\_filter\_value |  | string | `"VPC"` | no |
-| common\_tags |  | map | n/a | yes |
+| common\_tags | Implements the common tags scheme | map | n/a | yes |
 | requester\_account\_alias |  | string | `""` | no |
 | requester\_filter\_name |  | string | `"tag:aws:cloudformation:logical-id"` | no |
 | requester\_filter\_value |  | string | `"VPC"` | no |
