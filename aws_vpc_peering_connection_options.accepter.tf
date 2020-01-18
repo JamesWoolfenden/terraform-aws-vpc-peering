@@ -7,3 +7,4 @@ resource "aws_vpc_peering_connection_options" "accepter" {
     allow_remote_vpc_dns_resolution = true
   }
 }
+

@@ -10,3 +10,4 @@ resource "aws_vpc_peering_connection" "peer" {
     map("Peered Account",
   var.accepter_account_alias))
 }
+
