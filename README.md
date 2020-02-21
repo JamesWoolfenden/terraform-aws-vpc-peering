@@ -24,18 +24,34 @@ module "peer" {
   }
 }
 ```
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws.accepter | n/a |
+| aws.requester | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|
-| accepter\_account\_alias |  | string | `""` | no |
-| accepter\_filter\_name |  | string | `"tag:aws:cloudformation:logical-id"` | no |
-| accepter\_filter\_value |  | string | `"VPC"` | no |
-| common\_tags | Implements the common tags scheme | map | n/a | yes |
-| requester\_account\_alias |  | string | `""` | no |
-| requester\_filter\_name |  | string | `"tag:aws:cloudformation:logical-id"` | no |
-| requester\_filter\_value |  | string | `"VPC"` | no |
+|------|-------------|------|---------|:-----:|
+| accepter\_account\_alias | n/a | `string` | `""` | no |
+| accepter\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
+| accepter\_filter\_value | n/a | `string` | `"VPC"` | no |
+| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| requester\_account\_alias | n/a | `string` | `""` | no |
+| requester\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
+| requester\_filter\_value | n/a | `string` | `"VPC"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| accepter\_peer | n/a |
+| connection\_peer | n/a |
+| option\_accepter | n/a |
+| options\_requester | n/a |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
