@@ -1,7 +1,11 @@
 
 [![Slalom][logo]](https://slalom.com)
 
-# terraform-aws-vpc-peering [![Build Status](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc-peering.svg?branch=master)](https://travis-ci.com/JamesWoolfenden/terraform-aws-vpc-peering) [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc-peering.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/releases/latest)  [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+# terraform-aws-vpc-peering
+
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering)
+[![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc-peering.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/releases/latest)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 
 Terraform module to peer VPCs.
 
@@ -24,35 +28,8 @@ module "peer" {
   }
 }
 ```
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-## Providers
-
-| Name | Version |
-|------|---------|
-| aws.accepter | n/a |
-| aws.requester | n/a |
-
-## Inputs
-
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:-----:|
-| accepter\_account\_alias | n/a | `string` | `""` | no |
-| accepter\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
-| accepter\_filter\_value | n/a | `string` | `"VPC"` | no |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
-| requester\_account\_alias | n/a | `string` | `""` | no |
-| requester\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
-| requester\_filter\_value | n/a | `string` | `"VPC"` | no |
-
-## Outputs
-
-| Name | Description |
-|------|-------------|
-| accepter\_peer | n/a |
-| connection\_peer | n/a |
-| option\_accepter | n/a |
-| options\_requester | n/a |
-
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+Error: no lines in file
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
@@ -114,9 +91,9 @@ under the License.
 [jameswoolfenden_avatar]: https://github.com/jameswoolfenden.png?size=150
 [logo]: https://gist.githubusercontent.com/JamesWoolfenden/5c457434351e9fe732ca22b78fdd7d5e/raw/15933294ae2b00f5dba6557d2be88f4b4da21201/slalom-logo.png
 [website]: https://slalom.com
-[github]: https://github.com/jameswoolfenden
+[linkedin]: https://www.linkedin.com/in/jameswoolfenden/
 [linkedin]: https://www.linkedin.com/company/slalom-consulting/
-[twitter]: https://twitter.com/Slalom
+[twitter]: https://twitter.com/JimWoolfenden
 
 [share_twitter]: https://twitter.com/intent/tweet/?text=terraform-aws-vpc-peering&url=https://github.com/jameswoolfenden/terraform-aws-vpc-peering
 [share_linkedin]: https://www.linkedin.com/shareArticle?mini=true&title=terraform-aws-vpc-peering&url=https://github.com/jameswoolfenden/terraform-aws-vpc-peering
