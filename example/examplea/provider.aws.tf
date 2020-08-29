@@ -1,11 +1,9 @@
 provider "aws" {
-  alias   = "src"
-  region  = "eu-west-1"
-  version = "3.00.0"
+  alias  = "src"
+  region = "eu-west-1"
 }
 
 provider "aws" {
-  alias   = "req"
-  region  = "eu-west-2"
-  version = "3.00.0"
+  alias  = "req"
+  region = "eu-west-2"
 }
