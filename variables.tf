@@ -2,7 +2,7 @@
 
 variable "common_tags" {
   description = "Implements the common tags scheme"
-  type        = map
+  type        = map(any)
 }
 
 variable "requester_account_alias" {

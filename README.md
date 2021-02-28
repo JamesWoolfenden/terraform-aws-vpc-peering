@@ -45,6 +45,22 @@ No requirements.
 | aws.accepter | n/a |
 | aws.requester | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) |
+| [aws_route](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) |
+| [aws_route_tables](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route_tables) |
+| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpc) |
+| [aws_vpc_peering_connection](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_peering_connection) |
+| [aws_vpc_peering_connection_accepter](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_peering_connection_accepter) |
+| [aws_vpc_peering_connection_options](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_peering_connection_options) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -52,7 +68,7 @@ No requirements.
 | accepter\_account\_alias | n/a | `string` | `""` | no |
 | accepter\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
 | accepter\_filter\_value | n/a | `string` | `"VPC"` | no |
-| common\_tags | Implements the common tags scheme | `map` | n/a | yes |
+| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
 | requester\_account\_alias | n/a | `string` | `""` | no |
 | requester\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
 | requester\_filter\_value | n/a | `string` | `"VPC"` | no |
@@ -65,7 +81,6 @@ No requirements.
 | connection\_peer | n/a |
 | option\_accepter | n/a |
 | options\_requester | n/a |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
