@@ -3,7 +3,15 @@ data "aws_route_tables" "accepter" {
   vpc_id   = data.aws_vpc.accepter.id
 
   filter {
-    name   = var.accepter_filter_name
-    values = ["PrivateRouteTable*"]
+    name   = var.route_table_accepter_filter_name
+    values = [var.route_table_tag_acceptor]
   }
+}
+
+variable "route_table_tag_acceptor" {
+  default = "PrivateRouteTable*"
+}
+
+variable "route_table_accepter_filter_name" {
+  default = "tag:Name"
 }

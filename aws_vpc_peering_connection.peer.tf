@@ -6,7 +6,7 @@ resource "aws_vpc_peering_connection" "peer" {
   auto_accept   = false
 
   tags = merge(var.common_tags,
-    map("Side", "Requester"),
-    map("Peered Account",
-  var.accepter_account_alias))
+    { "Side" = "Requester" },
+    { "Peered Account" = var.accepter_account_alias }
+  )
 }

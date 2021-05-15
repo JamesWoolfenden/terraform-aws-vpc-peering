@@ -1,9 +1,9 @@
 provider "aws" {
-  alias  = "src"
+  alias  = "accepter"
   region = "eu-west-1"
 }
 
 provider "aws" {
-  alias  = "req"
+  alias  = "requester"
   region = "eu-west-2"
 }
