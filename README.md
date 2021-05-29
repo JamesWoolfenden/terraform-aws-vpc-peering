@@ -36,51 +36,62 @@ module "peer" {
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
-No requirements.
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=0.14.8 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 3.39.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws.accepter | n/a |
-| aws.requester | n/a |
+| <a name="provider_aws.accepter"></a> [aws.accepter](#provider\_aws.accepter) | 3.39.0 |
+| <a name="provider_aws.requester"></a> [aws.requester](#provider\_aws.requester) | 3.39.0 |
 
 ## Modules
 
-No Modules.
+No modules.
 
 ## Resources
 
-| Name |
-|------|
-| [aws_caller_identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) |
-| [aws_route](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route) |
-| [aws_route_tables](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route_tables) |
-| [aws_vpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/vpc) |
-| [aws_vpc_peering_connection](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_peering_connection) |
-| [aws_vpc_peering_connection_accepter](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_peering_connection_accepter) |
-| [aws_vpc_peering_connection_options](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc_peering_connection_options) |
+| Name | Type |
+|------|------|
+| [aws_route.accepter](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/resources/route) | resource |
+| [aws_route.requester](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/resources/route) | resource |
+| [aws_vpc_peering_connection.peer](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/resources/vpc_peering_connection) | resource |
+| [aws_vpc_peering_connection_accepter.peer](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/resources/vpc_peering_connection_accepter) | resource |
+| [aws_vpc_peering_connection_options.accepter](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/resources/vpc_peering_connection_options) | resource |
+| [aws_vpc_peering_connection_options.requester](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/resources/vpc_peering_connection_options) | resource |
+| [aws_caller_identity.peer](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/data-sources/caller_identity) | data source |
+| [aws_route_tables.accepter](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/data-sources/route_tables) | data source |
+| [aws_route_tables.requester](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/data-sources/route_tables) | data source |
+| [aws_vpc.accepter](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/data-sources/vpc) | data source |
+| [aws_vpc.requester](https://registry.terraform.io/providers/hashicorp/aws/3.39.0/docs/data-sources/vpc) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| accepter\_account\_alias | n/a | `string` | `""` | no |
-| accepter\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
-| accepter\_filter\_value | n/a | `string` | `"VPC"` | no |
-| common\_tags | Implements the common tags scheme | `map(any)` | n/a | yes |
-| requester\_account\_alias | n/a | `string` | `""` | no |
-| requester\_filter\_name | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
-| requester\_filter\_value | n/a | `string` | `"VPC"` | no |
+| <a name="input_accepter_account_alias"></a> [accepter\_account\_alias](#input\_accepter\_account\_alias) | n/a | `string` | `""` | no |
+| <a name="input_accepter_filter_name"></a> [accepter\_filter\_name](#input\_accepter\_filter\_name) | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
+| <a name="input_accepter_filter_value"></a> [accepter\_filter\_value](#input\_accepter\_filter\_value) | n/a | `string` | `"VPC"` | no |
+| <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | Implements the common tags scheme | `map(any)` | n/a | yes |
+| <a name="input_requester_account_alias"></a> [requester\_account\_alias](#input\_requester\_account\_alias) | n/a | `string` | `""` | no |
+| <a name="input_requester_filter_name"></a> [requester\_filter\_name](#input\_requester\_filter\_name) | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
+| <a name="input_requester_filter_value"></a> [requester\_filter\_value](#input\_requester\_filter\_value) | n/a | `string` | `"VPC"` | no |
+| <a name="input_route_table_accepter_filter_name"></a> [route\_table\_accepter\_filter\_name](#input\_route\_table\_accepter\_filter\_name) | n/a | `string` | `"tag:Name"` | no |
+| <a name="input_route_table_requester_filter_name"></a> [route\_table\_requester\_filter\_name](#input\_route\_table\_requester\_filter\_name) | n/a | `string` | `"tag:Name"` | no |
+| <a name="input_route_table_tag_acceptor"></a> [route\_table\_tag\_acceptor](#input\_route\_table\_tag\_acceptor) | n/a | `string` | `"PrivateRouteTable*"` | no |
+| <a name="input_route_table_tag_requestor"></a> [route\_table\_tag\_requestor](#input\_route\_table\_tag\_requestor) | n/a | `string` | `"PrivateRouteTable*"` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| accepter\_peer | n/a |
-| connection\_peer | n/a |
-| option\_accepter | n/a |
-| options\_requester | n/a |
+| <a name="output_accepter_peer"></a> [accepter\_peer](#output\_accepter\_peer) | n/a |
+| <a name="output_connection_peer"></a> [connection\_peer](#output\_connection\_peer) | n/a |
+| <a name="output_option_accepter"></a> [option\_accepter](#output\_option\_accepter) | n/a |
+| <a name="output_options_requester"></a> [options\_requester](#output\_options\_requester) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 ## Instructions
