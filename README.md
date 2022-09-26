@@ -39,14 +39,14 @@ module "peer" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=0.14.8 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.10.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.31.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws.accepter"></a> [aws.accepter](#provider\_aws.accepter) | 4.10.0 |
-| <a name="provider_aws.requester"></a> [aws.requester](#provider\_aws.requester) | 4.10.0 |
+| <a name="provider_aws.accepter"></a> [aws.accepter](#provider\_aws.accepter) | 4.31.0 |
+| <a name="provider_aws.requester"></a> [aws.requester](#provider\_aws.requester) | 4.31.0 |
 
 ## Modules
 
@@ -56,17 +56,17 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_route.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/route) | resource |
-| [aws_route.requester](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/route) | resource |
-| [aws_vpc_peering_connection.peer](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/vpc_peering_connection) | resource |
-| [aws_vpc_peering_connection_accepter.peer](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/vpc_peering_connection_accepter) | resource |
-| [aws_vpc_peering_connection_options.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/vpc_peering_connection_options) | resource |
-| [aws_vpc_peering_connection_options.requester](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/resources/vpc_peering_connection_options) | resource |
-| [aws_caller_identity.peer](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/data-sources/caller_identity) | data source |
-| [aws_route_tables.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/data-sources/route_tables) | data source |
-| [aws_route_tables.requester](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/data-sources/route_tables) | data source |
-| [aws_vpc.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/data-sources/vpc) | data source |
-| [aws_vpc.requester](https://registry.terraform.io/providers/hashicorp/aws/4.10.0/docs/data-sources/vpc) | data source |
+| [aws_route.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/route) | resource |
+| [aws_route.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/route) | resource |
+| [aws_vpc_peering_connection.peer](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection) | resource |
+| [aws_vpc_peering_connection_accepter.peer](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection_accepter) | resource |
+| [aws_vpc_peering_connection_options.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection_options) | resource |
+| [aws_vpc_peering_connection_options.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection_options) | resource |
+| [aws_caller_identity.peer](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/caller_identity) | data source |
+| [aws_route_tables.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/route_tables) | data source |
+| [aws_route_tables.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/route_tables) | data source |
+| [aws_vpc.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/vpc) | data source |
+| [aws_vpc.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/vpc) | data source |
 
 ## Inputs
 
@@ -115,9 +115,15 @@ resource "aws_iam_policy" "terraform_pike" {
             "Effect": "Allow",
             "Action": [
                 "ec2:CreateRoute",
+                "ec2:CreateTags",
+                "ec2:CreateVpcPeeringConnection",
                 "ec2:DeleteRoute",
+                "ec2:DeleteTags",
+                "ec2:DeleteVpcPeeringConnection",
+                "ec2:DescribeAccountAttributes",
                 "ec2:DescribeRouteTables",
                 "ec2:DescribeVpcAttribute",
+                "ec2:DescribeVpcPeeringConnections",
                 "ec2:DescribeVpcs"
             ],
             "Resource": "*"
