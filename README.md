@@ -121,12 +121,16 @@ resource "aws_iam_policy" "terraform_pike" {
                 "ec2:DeleteTags",
                 "ec2:DeleteVpcPeeringConnection",
                 "ec2:DescribeAccountAttributes",
+                "ec2:DescribeNetworkInterfaces",
                 "ec2:DescribeRouteTables",
                 "ec2:DescribeVpcAttribute",
                 "ec2:DescribeVpcPeeringConnections",
-                "ec2:DescribeVpcs"
+                "ec2:DescribeVpcs",
+                "ec2:ReplaceRoute"
             ],
-            "Resource": "*"
+            "Resource": [
+                "*"
+            ]
         }
     ]
 })
