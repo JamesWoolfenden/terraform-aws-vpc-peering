@@ -1,13 +1,11 @@
 # terraform-aws-vpc-peering
 
-[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/workflows/Verify%20and%20Bump/badge.svg?branch=master)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering)
+[![Build Status](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/workflows/Verify/badge.svg?branch=main)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering)
 [![Latest Release](https://img.shields.io/github/release/JamesWoolfenden/terraform-aws-vpc-peering.svg)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/releases/latest)
 [![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/JamesWoolfenden/terraform-aws-vpc-peering.svg?label=latest)](https://github.com/JamesWoolfenden/terraform-aws-vpc-peering/releases/latest)
 ![Terraform Version](https://img.shields.io/badge/tf-%3E%3D0.14.0-blue.svg)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/JamesWoolfenden/terraform-aws-vpc-peering/cis_aws)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-vpc-peering&benchmark=CIS+AWS+V1.2)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![checkov](https://img.shields.io/badge/checkov-verified-brightgreen)](https://www.checkov.io/)
-[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/jameswoolfenden/terraform-aws-vpc-peering/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=JamesWoolfenden%2Fterraform-aws-vpc-peering&benchmark=INFRASTRUCTURE+SECURITY)
 
 ---
 
@@ -37,16 +35,16 @@ module "peer" {
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=0.14.8 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.31.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 6.43.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
-| <a name="provider_aws.accepter"></a> [aws.accepter](#provider\_aws.accepter) | 4.31.0 |
-| <a name="provider_aws.requester"></a> [aws.requester](#provider\_aws.requester) | 4.31.0 |
+| ---- | ------- |
+| <a name="provider_aws.accepter"></a> [aws.accepter](#provider\_aws.accepter) | 6.43.0 |
+| <a name="provider_aws.requester"></a> [aws.requester](#provider\_aws.requester) | 6.43.0 |
 
 ## Modules
 
@@ -55,23 +53,23 @@ No modules.
 ## Resources
 
 | Name | Type |
-|------|------|
-| [aws_route.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/route) | resource |
-| [aws_route.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/route) | resource |
-| [aws_vpc_peering_connection.peer](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection) | resource |
-| [aws_vpc_peering_connection_accepter.peer](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection_accepter) | resource |
-| [aws_vpc_peering_connection_options.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection_options) | resource |
-| [aws_vpc_peering_connection_options.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/resources/vpc_peering_connection_options) | resource |
-| [aws_caller_identity.peer](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/caller_identity) | data source |
-| [aws_route_tables.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/route_tables) | data source |
-| [aws_route_tables.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/route_tables) | data source |
-| [aws_vpc.accepter](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/vpc) | data source |
-| [aws_vpc.requester](https://registry.terraform.io/providers/hashicorp/aws/4.31.0/docs/data-sources/vpc) | data source |
+| ---- | ---- |
+| [aws_route.accepter](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/resources/route) | resource |
+| [aws_route.requester](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/resources/route) | resource |
+| [aws_vpc_peering_connection.peer](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/resources/vpc_peering_connection) | resource |
+| [aws_vpc_peering_connection_accepter.peer](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/resources/vpc_peering_connection_accepter) | resource |
+| [aws_vpc_peering_connection_options.accepter](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/resources/vpc_peering_connection_options) | resource |
+| [aws_vpc_peering_connection_options.requester](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/resources/vpc_peering_connection_options) | resource |
+| [aws_caller_identity.peer](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/data-sources/caller_identity) | data source |
+| [aws_route_tables.accepter](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/data-sources/route_tables) | data source |
+| [aws_route_tables.requester](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/data-sources/route_tables) | data source |
+| [aws_vpc.accepter](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/data-sources/vpc) | data source |
+| [aws_vpc.requester](https://registry.terraform.io/providers/hashicorp/aws/6.43.0/docs/data-sources/vpc) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_accepter_account_alias"></a> [accepter\_account\_alias](#input\_accepter\_account\_alias) | n/a | `string` | `""` | no |
 | <a name="input_accepter_filter_name"></a> [accepter\_filter\_name](#input\_accepter\_filter\_name) | n/a | `string` | `"tag:aws:cloudformation:logical-id"` | no |
 | <a name="input_accepter_filter_value"></a> [accepter\_filter\_value](#input\_accepter\_filter\_value) | n/a | `string` | `"VPC"` | no |
@@ -87,7 +85,7 @@ No modules.
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_accepter_peer"></a> [accepter\_peer](#output\_accepter\_peer) | n/a |
 | <a name="output_connection_peer"></a> [connection\_peer](#output\_connection\_peer) | n/a |
 | <a name="output_option_accepter"></a> [option\_accepter](#output\_option\_accepter) | n/a |
